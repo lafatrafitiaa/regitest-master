@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<div class="py-3" *ngFor = "let detail of ficheProduit">
+    <h1 class="text-center">{{ detail.designation }}</h1>
+    <div class="p-2">
+        <div class="row py-3" style="border-radius: 5px;border-width: 1px;border-style: solid;">
+            <div class="col-12"><img class="img-fluid img-thumbnail" src="assets/img/Sanstitre-3_700x700.webp?h=fbd93d39cd1011a3505be7d8225f89ea"></div>
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Client</strong></td>
+                                <td>{{ detail.email_client }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Description</strong></td>
+                                <td>Cela commence par le Wi-Fi intégré pour imprimer et numériser n'importe où dans votre maison à partir d'ordinateurs et d'appareils mobiles compatibles</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Date</strong></td>
+                                <td>{{ detail.datedemande }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prix</strong></td>
+                                <td>{{ detail.prix }} Ar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><button class="btn btn-danger float-end" type="button" (click)="valideeNotificationDetail(detail.id, detail.email_client)">Confirmer</button>
+            </div>
+        </div>
+    </div>
+</div>

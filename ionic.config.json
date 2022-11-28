@@ -1,0 +1,7 @@
+{
+  "name": "regitest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
